@@ -4,6 +4,8 @@ import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { FaSearch, FaBuilding, FaTruck, FaShieldAlt, FaHandshake } from "react-icons/fa";
+
 
 interface CardDetails {
   title: string;
@@ -370,7 +372,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
           />
         </div>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          Whether you're an individual investor or organization, Bullione is your trusted partner in unlocking Africa’s investment potential.
+          Whether you&apos;re an individual investor or organization, Bullione is your trusted partner in unlocking Africa’s investment potential.
         </p>
       </>
     ),
@@ -683,6 +685,118 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
       </>
     ),
   },
+  // 7.  Healthcare and Pharmaceutical Solutions
+  
+"Healthcare and Pharmaceutical Solutions": {
+  title: "Healthcare and Pharmaceutical Solutions",
+  images: ["/images/Healthcare1.jpg", "/images/Healthcare2.jpg", "/images/Healthcare3.jpg"],
+  fullContent: (
+    <>
+      <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
+        At Bullione, we empower foreign investors and businesses to capitalize on Africa’s rapidly 
+        growing healthcare and pharmaceutical sector. Our end-to-end solutions ensure seamless 
+        market entry, regulatory compliance, and efficient operations for sustainable success.
+      </p>
+      <p className="font-bold text-5xl text-orange-600 my-4">Our Solutions Include:</p>
+      <div className="grid grid-cols-2 gap-4">
+
+        <BulletCard 
+          icon={IconMagnify}
+          text={
+            <span className="text-2xl">
+              <strong>Market-Driven Data Insights</strong> – Leverage in-depth analytics to make informed 
+              investment decisions.
+            </span>
+          }
+        />
+
+        <BulletCard 
+          icon={IconBuilding} 
+          text={
+            <span className="text-2xl">
+              <strong>Business Setup & Expansion</strong> – Establish and scale operations with ease.
+            </span>
+          }
+        />
+
+        <BulletCard 
+          icon={IconChecklist}
+          text={
+            <span className="text-2xl">
+              <strong>Turnkey Supply Chain Solutions</strong> – From procurement to distribution, 
+              we streamline the entire supply chain.
+            </span>
+          }
+        />
+
+        <BulletCard 
+          icon={IconRocket}
+          text={
+            <span className="text-2xl">
+              <strong>Regulatory & Compliance Support</strong> – Navigate licensing, approvals, 
+              and legal frameworks.
+            </span>
+          }
+        />
+
+        <BulletCard 
+          icon={IconGroup} 
+          text={
+            <span className="text-2xl">
+              <strong>Strategic Partnerships & Tenders</strong> – Connect with key industry players 
+              and access high-value opportunities.
+            </span>
+          }
+        />
+
+      </div>
+      
+        <p className="font-bold text-5xl text-orange-600 my-4">Our Approach:</p>
+        <div>
+        <BulletCard  
+          text={<span className="text-2xl">
+            <strong>Tailored Investment Strategies</strong> – We Provide customized investment plans
+            aligned with your goals and risk appetite.
+          </span>} icon={undefined}        />
+
+             <BulletCard  
+          text={<span className="text-2xl">
+            <strong>End-to-End Support</strong> – From market entry to full-scale operations,
+            We guide you every step of the way.
+          </span>} icon={undefined}        />
+
+             <BulletCard  
+          text={<span className="text-2xl">
+            <strong>AI-Driven Market Analysis</strong> – We Leverage cutting-edge technologyto identify
+            the most lucrative opportunities.
+          </span>} icon={undefined}        />
+
+             <BulletCard  
+          text={<span className="text-2xl">
+            <strong>Local Expertise & Global Networks</strong> – Our deep understanding of African markets
+            coupled with strong international partnerships, ensures your success.
+          </span>} icon={undefined}        />
+
+             <BulletCard  
+          text={<span className="text-2xl">
+            <strong>Sustainability & Impact-Driven Solutions</strong> – We focus on investments that create long-term
+            value while driving positive change in healthcare access and quality.
+          </span>} icon={undefined}        />
+        </div>
+
+        <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
+        At Bullione, we combine deep market expertise with innovative investment strategies to help
+        you unlock the full potential of Africa’s healthcare and pharmaceutical sector.
+      </p>
+
+      <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
+      <strong>Partner with us and invest with confidence</strong>
+      </p>
+    </>
+  ),
+ },
+ // 7.  Market Intelligence.
+ 
 };
 
 const AfricanImageSlider: React.FC<{ images: string[]; title: string }> = ({
