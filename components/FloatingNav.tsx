@@ -56,9 +56,9 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-        {['Home', 'About', 'Services', 'Careers', 'Blog', 'Contact'].map((item) => (
+        {['Home', 'About', 'Services', 'Careers', 'Blog'].map((item) => (
           <li key={item}>
-            <Link href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`} legacyBehavior>
+            <Link href={item === 'About' ? '#who-we-are' : item === 'Services' ? '#our-services' : item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`} legacyBehavior>
               <a className={`hover:text-yellow-500 transition ${pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`) ? 'text-yellow-500' : ''}`}>
                 {item}
               </a>
