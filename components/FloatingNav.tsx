@@ -49,6 +49,14 @@ export default function Navbar() {
         <li><Link href="/careers" className="hover:text-yellow-500 transition">Careers</Link></li>
         <li><Link href="/blog" className="hover:text-yellow-500 transition">Blog</Link></li>
         <li><Link href="/#contact" className="hover:text-yellow-500 transition">Contact</Link></li>
+        <div className='flex hover:text-yellow-500 transition'>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
       </ul>
       <div className="action-buttons flex gap-6">
         <Link href="/book-a-call" legacyBehavior>
@@ -57,14 +65,7 @@ export default function Navbar() {
             Book a Call
           </a>
         </Link>
-        <div className='flex'>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </div>
+        
       </div>
     </nav>
   );
