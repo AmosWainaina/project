@@ -796,8 +796,8 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
   ),
  },
  // 9.  Market Intelligence.
- "Market Intelligence, Franchising and Licensing, ICT and Data Center Developments": {
-  title: "Market Intelligence, Franchising and Licensing, ICT and Data Center Developments",
+ "Market Intelligence, Franchising and Licensing": {
+  title: "Market Intelligence, Franchising and Licensing",
   images: ["/images/Market1", "/images/Market2.jpg"],
   fullContent: (
     <>
