@@ -18,6 +18,8 @@ const serviceIcons: { [key: string]: string } = {
   "Mergers & Acquisitions": "🤝",
   "Real Estate Investment Advisory": "🏢",
   "Offshore Fiduciary Services": "🌐",
+  "Healthcare and Pharmaceutical Solutions": "⚕️", 
+  "Market Intelligence, Franchising and Licensing": "📊", 
 };
 
 const Card: React.FC<CardProps> = ({ title, content }) => {
@@ -101,6 +103,16 @@ export default function ServicesSection() {
             title="Offshore Fiduciary Services"
             content={<p>Secure Your Wealth, Globally and Discreetly.</p>}
             fullContent={<>Full content for Offshore Fiduciary Services.</>}
+          />
+          <Card
+            title="Healthcare and Pharmaceutical Solutions"
+            content={<p>Your Gateway to Thriving Healthcare Investments in Africa.</p>}
+            fullContent={<>Full content for Healthcare and Pharmaceutical Solutions.</>}
+          />
+          <Card
+            title="Market Intelligence, Franchising and Licensing"
+            content={<p>From Insightsto Infrastructure-Powering Your Future</p>}
+            fullContent={<>Market Intelligence, Franchising and Licensing</>}
           />
         </div>
       </div>
