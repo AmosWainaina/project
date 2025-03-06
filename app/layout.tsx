@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Bullione',
   description: "Your Gateway to Africa's Golden Future",
+  icons: {
+    icon: '/images/logo.png',
+  },
 };
 
 export default function RootLayout({
