@@ -58,7 +58,7 @@ export default function Navbar() {
       <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
         {['Home', 'About', 'Services', 'Careers', 'Blog'].map((item) => (
           <li key={item}>
-            <Link href={item === 'About' ? '#who-we-are' : item === 'Services' ? '#our-services' : item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`} legacyBehavior>
+            <Link href={item === 'About' ? '#about' : item === 'Services' ? '#services' : item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`} legacyBehavior>
               <a className={`hover:text-yellow-500 transition ${pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`) ? 'text-yellow-500' : ''}`}>
                 {item}
               </a>
