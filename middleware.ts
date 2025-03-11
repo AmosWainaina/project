@@ -1,10 +1,15 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-const isPrivateRoute = createRouteMatcher(['/#dashboard(.*)']);
+const isPrivateRoute = createRouteMatcher(['/dashboard(.*)']);
 
 export default clerkMiddleware(async (auth, request) => {
-  if (isPrivateRoute(request)) {
-    await auth.protect();
+  try {
+    if (isPrivateRoute(request)) {
+      await auth.protect();
+    }
+  } catch (error) {
+    console.error("Clerk middleware error:", error);
+    return new Response('Internal Server Error', { status: 500 });
   }
 });
 

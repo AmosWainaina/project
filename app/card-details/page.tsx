@@ -180,9 +180,9 @@ const IconRocket = (
 
 
 const cardDetailsMapping: { [key: string]: CardDetails } = {
-  // 1. EPC & Infrastructure Solutions (already has icons inline)
-  "EPC & Infrastructure Solutions": {
-    title: "EPC & Infrastructure Solutions",
+  // 1. EPC &amp; Infrastructure Solutions (already has icons inline)
+  "EPC &amp; Infrastructure Solutions": {
+    title: "EPC &amp; Infrastructure Solutions",
     images: ["/images/epc1.jpg", "/images/epc2.jpg", "/images/epc3.jpg"],
     fullContent: (
       <>
@@ -198,7 +198,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconMagnify}
             text={
               <span className="text-3xl">
-                Market Research & Feasibility – Identify high-potential projects and conduct in-depth studies.
+                Market Research &amp; Feasibility – Identify high-potential projects and conduct in-depth studies.
               </span>
             }
           />
@@ -206,7 +206,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconGroup}
             text={
               <span className="text-2xl">
-                Investor & Developer Matching – Connect investors with vetted project owners.
+                Investor &amp; Developer Matching – Connect investors with vetted project owners.
               </span>
             }
           />
@@ -214,7 +214,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconChecklist}
             text={
               <span className="text-2xl">
-                Due Diligence & Structuring – Assess legal, financial, and technical viability.
+                Due Diligence &amp; Structuring – Assess legal, financial, and technical viability.
               </span>
             }
           />
@@ -222,7 +222,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconCurrency}
             text={
               <span className="text-2xl">
-                Project Financing & Capital Raising – Facilitate funding through diverse solutions.
+                Project Financing &amp; Capital Raising – Facilitate funding through diverse solutions.
               </span>
             }
           />
@@ -230,7 +230,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconPencil}
             text={
               <span className="text-2xl">
-                Design & Engineering – Manage design, permitting, and technical planning.
+                Design &amp; Engineering – Manage design, permitting, and technical planning.
               </span>
             }
           />
@@ -238,7 +238,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconCart}
             text={
               <span className="text-2xl">
-                Procurement & Contracting – Source quality materials and secure contractors.
+                Procurement &amp; Contracting – Source quality materials and secure contractors.
               </span>
             }
           />
@@ -246,7 +246,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconBuilding}
             text={
               <span className="text-2xl">
-                Construction & Implementation – Oversee execution with quality and compliance.
+                Construction &amp; Implementation – Oversee execution with quality and compliance.
               </span>
             }
           />
@@ -254,7 +254,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconWrench}
             text={
               <span className="text-2xl">
-                Operations & Maintenance – Provide post-construction management.
+                Operations &amp; Maintenance – Provide post-construction management.
               </span>
             }
           />
@@ -262,7 +262,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconBarChart}
             text={
               <span className="text-2xl">
-                Monitoring & Impact Assessment – Measure success and ensure ESG compliance.
+                Monitoring &amp; Impact Assessment – Measure success and ensure ESG compliance.
               </span>
             }
           />
@@ -271,25 +271,25 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
         <p className="font-bold text-5xl text-orange-600 my-4">Why Bullione?</p>
         <ul className="pl-5 space-y-2 text-3xl text-gray-300 border-l-4 border-orange-500 pl-4">
           <li> End-to-End Solutions – We handle everything from ideation to management.</li>
-          <li> Pan-African Reach – Extensive networks across Africa’s key hubs.</li>
+          <li> Pan-African Reach – Extensive networks across Africa&apos;s key hubs.</li>
           <li> Strategic Partnerships – Access to top-tier investors and developers.</li>
-          <li> Sustainable &amp; Profitable – Focus on high-impact, profitable infrastructure.</li>
+          <li> Sustainable &amp;amp; Profitable – Focus on high-impact, profitable infrastructure.</li>
         </ul>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          Transforming Africa’s Infrastructure – One Project at a Time.
+          Transforming Africa&apos;s Infrastructure – One Project at a Time.
         </p>
       </>
     ),
   },
 
-  // 2. Direct Investments & Foreign Direct Investments
-  "Direct Investments & Foreign Direct Investments": {
-    title: "Direct Investments & Foreign Direct Investments",
+  // 2. Direct Investments &amp; Foreign Direct Investments
+  "Direct Investments &amp; Foreign Direct Investments": {
+    title: "Direct Investments &amp; Foreign Direct Investments",
     images: ["/images/direct1.jpg", "/images/direct2.jpg", "/images/direct3.jpg"],
     fullContent: (
       <>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          At Bullione, we help high-net-worth individuals and businesses access Africa’s most promising investment opportunities.
+          At Bullione, we help high-net-worth individuals and businesses access Africa&apos;s most promising investment opportunities.
         </p>
         <p className="font-bold text-5xl text-orange-600 my-4">Our Approach</p>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
@@ -301,7 +301,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconMagnify}
             text={
               <span className="text-2xl">
-                Market Research & Feasibility – Identify high-potential projects and conduct in-depth studies.
+                Market Research &amp; Feasibility – Identify high-potential projects and conduct in-depth studies.
               </span>
             }
           />
@@ -309,7 +309,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconGroup}
             text={
               <span className="text-2xl">
-                Investor & Developer Matching – Connect investors with vetted project owners.
+                Investor &amp; Developer Matching – Connect investors with vetted project owners.
               </span>
             }
           />
@@ -317,7 +317,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconChecklist}
             text={
               <span className="text-2xl">
-                Due Diligence & Structuring – Assess legal, financial, and technical viability.
+                Due Diligence &amp; Structuring – Assess legal, financial, and technical viability.
               </span>
             }
           />
@@ -325,7 +325,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconCurrency}
             text={
               <span className="text-2xl">
-                Project Financing & Capital Raising – Facilitate funding through diverse solutions.
+                Project Financing &amp; Capital Raising – Facilitate funding through diverse solutions.
               </span>
             }
           
@@ -334,7 +334,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconPencil}
             text={
               <span className="text-2xl">
-                Design & Engineering – Manage design, permitting, and technical planning.
+                Design &amp; Engineering – Manage design, permitting, and technical planning.
               </span>
             }
           />
@@ -342,7 +342,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconCart}
             text={
               <span className="text-2xl">
-                Procurement & Contracting – Source quality materials and secure contractors.
+                Procurement &amp; Contracting – Source quality materials and secure contractors.
               </span>
             }
           />
@@ -350,7 +350,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconBuilding}
             text={
               <span className="text-2xl">
-                Construction & Implementation – Oversee execution with quality and compliance.
+                Construction &amp; Implementation – Oversee execution with quality and compliance.
               </span>
             }
           />
@@ -358,7 +358,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconWrench}
             text={
               <span className="text-2xl">
-                Operations & Maintenance – Provide post-construction management.
+                Operations &amp; Maintenance – Provide post-construction management.
               </span>
             }
           />
@@ -366,13 +366,13 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconBarChart}
             text={
               <span className="text-2xl">
-                Monitoring & Impact Assessment – Measure success and ensure ESG compliance.
+                Monitoring &amp; Impact Assessment – Measure success and ensure ESG compliance.
               </span>
             }
           />
         </div>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          Whether you&apos;re an individual investor or organization, Bullione is your trusted partner in unlocking Africa’s investment potential.
+          Whether you&amp;apos;re an individual investor or organization, Bullione is your trusted partner in unlocking Africa&apos;s investment potential.
         </p>
       </>
     ),
@@ -385,7 +385,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
     fullContent: (
       <>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          At Bullione, we help foreign investors mint their share of Africa’s vast precious metals—from gold and diamonds to copper and beyond.
+          At Bullione, we help foreign investors mint their share of Africa&apos;s vast precious metals—from gold and diamonds to copper and beyond.
         </p>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
           We eliminate risks from complex procedures and rogue agents by handling sourcing, export, and delivery along with value-added services such as insurance and regulatory navigation.
@@ -396,7 +396,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconMagnify}
             text={
               <span className="text-2xl">
-                Sourcing & Due Diligence – Identify authentic, high-quality precious metals.
+                Sourcing &amp; Due Diligence – Identify authentic, high-quality precious metals.
               </span>
             }
           />
@@ -412,7 +412,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconGear}
             text={
               <span className="text-2xl">
-                Risk Mitigation & Security – Vet suppliers and provide insurance options.
+                Risk Mitigation &amp; Security – Vet suppliers and provide insurance options.
               </span>
             }
           />
@@ -420,7 +420,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconBarChart}
             text={
               <span className="text-2xl">
-                Value Addition & Delivery – Ensure secure transport and added services.
+                Value Addition &amp; Delivery – Ensure secure transport and added services.
               </span>
             }
           />
@@ -434,15 +434,15 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
           />
         </div>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          With Bullione, you own a share of Africa’s thriving mineral wealth with certainty.
+          With Bullione, you own a share of Africa&apos;s thriving mineral wealth with certainty.
         </p>
       </>
     ),
   },
 
-  // 4. Government & Private Sector Projects
-  "Government & Private Sector Projects": {
-    title: "Government & Private Sector Projects",
+  // 4. Government &amp; Private Sector Projects
+  "Government &amp; Private Sector Projects": {
+    title: "Government &amp; Private Sector Projects",
     images: ["/images/gov1.jpg", "/images/gov2.jpg", "/images/gov3.jpg"],
     fullContent: (
       <>
@@ -463,7 +463,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconShield}
             text={
               <span className="text-2xl">
-                Regulatory & Compliance Support – Navigate legal frameworks for approvals.
+                Regulatory &amp; Compliance Support – Navigate legal frameworks for approvals.
               </span>
             }
           />
@@ -479,7 +479,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconRocket}
             text={
               <span className="text-2xl">
-                Partnerships & Networking – Leverage relationships with key stakeholders.
+                Partnerships &amp; Networking – Leverage relationships with key stakeholders.
               </span>
             }
           />
@@ -487,7 +487,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconBarChart}
             text={
               <span className="text-2xl">
-                Bid & Tender Support – Guide through the tender process.
+                Bid &amp; Tender Support – Guide through the tender process.
               </span>
             }
           />
@@ -495,21 +495,21 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconGear}
             text={
               <span className="text-2xl">
-                Project Execution & Monitoring – Coordinate for effective implementation.
+                Project Execution &amp; Monitoring – Coordinate for effective implementation.
               </span>
             }
           />
         </div>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          Bullione empowers investors to navigate Africa’s dynamic landscape, securing transformative investments.
+          Bullione empowers investors to navigate Africa&apos;s dynamic landscape, securing transformative investments.
         </p>
       </>
     ),
   },
 
-  // 5. Mergers & Acquisitions
-  "Mergers & Acquisitions": {
-    title: "Mergers & Acquisitions",
+  // 5. Mergers &amp; Acquisitions
+  "Mergers &amp; Acquisitions": {
+    title: "Mergers &amp; Acquisitions",
     images: ["/images/ma1.jpg", "/images/ma2.jpg", "/images/ma3.jpg"],
     fullContent: (
       <>
@@ -581,7 +581,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
     fullContent: (
       <>
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-          At Bullione, we help investors navigate Africa’s real estate landscape with expert guidance on property investments, asset management, and value appreciation.
+          At Bullione, we help investors navigate Africa&apos;s real estate landscape with expert guidance on property investments, asset management, and value appreciation.
         </p>
         <p className="font-bold text-5xl text-orange-600 my-4">Our Approach:</p>
         <div className="grid grid-cols-2 gap-4">
@@ -589,7 +589,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconMagnify}
             text={
               <span className="text-2xl">
-                Residential & Vacation Homes – Invest in luxury residences or serene getaways.
+                Residential &amp; Vacation Homes – Invest in luxury residences or serene getaways.
               </span>
             }
           />
@@ -597,7 +597,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconShield}
             text={
               <span className="text-2xl">
-                Commercial & Rental Properties – Maximize returns with strategically located assets.
+                Commercial &amp; Rental Properties – Maximize returns with strategically located assets.
               </span>
             }
           />
@@ -621,7 +621,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconRocket}
             text={
               <span className="text-2xl">
-                Government & Private Sector Access – Unlock exclusive opportunities.
+                Government &amp; Private Sector Access – Unlock exclusive opportunities.
               </span>
             }
           />
@@ -661,7 +661,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
             icon={IconMagnify}
             text={
               <span className="text-2xl">
-                Confidentiality & Security – Safeguard your investments.
+                Confidentiality &amp; Security – Safeguard your investments.
               </span>
             }
           />
@@ -693,7 +693,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
   fullContent: (
     <>
       <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-        At Bullione, we empower foreign investors and businesses to capitalize on Africa’s rapidly 
+        At Bullione, we empower foreign investors and businesses to capitalize on Africa&apos;s rapidly 
         growing healthcare and pharmaceutical sector. Our end-to-end solutions ensure seamless 
         market entry, regulatory compliance, and efficient operations for sustainable success.
       </p>
@@ -714,7 +714,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
           icon={IconBuilding} 
           text={
             <span className="text-2xl">
-              <strong>Business Setup & Expansion</strong> – Establish and scale operations with ease.
+              <strong>Business Setup &amp; Expansion</strong> – Establish and scale operations with ease.
             </span>
           }
         />
@@ -733,7 +733,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
           icon={IconRocket}
           text={
             <span className="text-2xl">
-              <strong>Regulatory & Compliance Support</strong> – Navigate licensing, approvals, 
+              <strong>Regulatory &amp; Compliance Support</strong> – Navigate licensing, approvals, 
               and legal frameworks.
             </span>
           }
@@ -743,7 +743,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
           icon={IconGroup} 
           text={
             <span className="text-2xl">
-              <strong>Strategic Partnerships & Tenders</strong> – Connect with key industry players 
+              <strong>Strategic Partnerships &amp; Tenders</strong> – Connect with key industry players 
               and access high-value opportunities.
             </span>
           }
@@ -773,20 +773,20 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
 
              <BulletCard  
           text={<span className="text-2xl">
-            <strong>Local Expertise & Global Networks</strong> – Our deep understanding of African markets
+            <strong>Local Expertise &amp; Global Networks</strong> – Our deep understanding of African markets
             coupled with strong international partnerships, ensures your success.
           </span>} icon={undefined}        />
 
              <BulletCard  
           text={<span className="text-2xl">
-            <strong>Sustainability & Impact-Driven Solutions</strong> – We focus on investments that create long-term
+            <strong>Sustainability &amp; Impact-Driven Solutions</strong> – We focus on investments that create long-term
             value while driving positive change in healthcare access and quality.
           </span>} icon={undefined}        />
         </div>
 
         <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
         At Bullione, we combine deep market expertise with innovative investment strategies to help
-        you unlock the full potential of Africa’s healthcare and pharmaceutical sector.
+        you unlock the full potential of Africa&apos;s healthcare and pharmaceutical sector.
       </p>
 
       <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
@@ -796,7 +796,7 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
   ),
  },
  // 9.  Market Intelligence.
- "Market Intelligence, Franchising and Licensing, ICT and Data Center Developments": {
+ "Market Intelligence, Franchising and Licensing": {
   title: "Market Intelligence, Franchising and Licensing, ICT and Data Center Developments",
   images: ["/images/Market1", "/images/Market2.jpg"],
   fullContent: (
@@ -805,8 +805,8 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
         From Insights to Infrastructure – Powering Your Future.
       </p>
       <p className="text-xl text-gray-200 my-4">
-        At Bullione, we provide investors with Market Intelligence, Franchising & Licensing, and ICT &
-        Data Center Development solutions to unlock Africa’s vast investment potential.
+        At Bullione, we provide investors with Market Intelligence, Franchising &amp; Licensing, and ICT &amp;
+        Data Center Development solutions to unlock Africa&apos;s vast investment potential.
       </p>
 
       <p className="font-bold text-5xl text-orange-600 my-4">Market Intelligence</p>
@@ -818,19 +818,19 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
           risk-mitigated decisions.
         </span>} icon={undefined}      />
 
-      <p className="font-bold text-5xl text-orange-600 my-4">Franchising & Licensing</p>
+      <p className="font-bold text-5xl text-orange-600 my-4">Franchising &amp; Licensing</p>
       <BulletCard 
         text={<span className="text-2xl">
           We assist foreign investors and businesses in developing and implementing franchise and
-          licensing models tailored to Africa’s diverse economic landscapes. Our expertise ensures that
+          licensing models tailored to Africa&apos;s diverse economic landscapes. Our expertise ensures that
           your expansion strategy aligns with local consumer behavior, regulatory frameworks, and
           market dynamics, setting you up for long-term success.
         </span>} icon={undefined}      />
 
-      <p className="font-bold text-5xl text-orange-600 my-4">ICT & Data Center Development</p>
+      <p className="font-bold text-5xl text-orange-600 my-4">ICT &amp; Data Center Development</p>
       <BulletCard 
         text={<span className="text-2xl">
-          By 2040, Africa’s population is projected to surpass China’s, driving an unprecedented demand
+          By 2040, Africa&apos;s population is projected to surpass China&apos;s, driving an unprecedented demand
           for digital infrastructure. Bullione helps investors and institutions tap into this high-growth
           market by providing end-to-end services for seamless market entry, project development, and
           operational success in ICT and data center investments.
@@ -838,18 +838,18 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
         <p className="font-bold text-5xl text-orange-600 my-4">Our Approach</p>
       <BulletCard text={<span className="text-2xl"><strong>Deep Market Research</strong> – AI-powered insights and local expertise to identify opportunities.</span>} icon={undefined} />
       <BulletCard text={<span className="text-2xl"><strong>Tailored Investment Strategies</strong> – Custom roadmaps ensuring alignment with market dynamics.</span>} icon={undefined} />
-      <BulletCard text={<span className="text-2xl"><strong>Regulatory Compliance & Risk Management</strong> – Smooth investment journey navigation.</span>} icon={undefined} />
-      <BulletCard text={<span className="text-2xl"><strong>End-to-End Support</strong> – From research to execution & operational success.</span>} icon={undefined} />
-      <BulletCard text={<span className="text-2xl"><strong>Impact-Driven Investments</strong> – Economic value & sustainable development.</span>} icon={undefined} />
+      <BulletCard text={<span className="text-2xl"><strong>Regulatory Compliance &amp; Risk Management</strong> – Smooth investment journey navigation.</span>} icon={undefined} />
+      <BulletCard text={<span className="text-2xl"><strong>End-to-End Support</strong> – From research to execution &amp; operational success.</span>} icon={undefined} />
+      <BulletCard text={<span className="text-2xl"><strong>Impact-Driven Investments</strong> – Economic value &amp; sustainable development.</span>} icon={undefined} />
 
       <p className="font-bold text-5xl text-orange-600 my-4">Why Choose Bullione?</p>
       <BulletCard text={<span className="text-2xl"><strong>End-to-End Solutions</strong> – From research to project implementation.</span>} icon={undefined} />
       <BulletCard text={<span className="text-2xl"><strong>AI-Powered Insights</strong> – Smart, data-driven strategies.</span>} icon={undefined} />
-      <BulletCard text={<span className="text-2xl"><strong>Local Expertise & Global Reach</strong> – Connecting international investors with Africa’s opportunities.</span>} icon={undefined} />
-      <BulletCard text={<span className="text-2xl"><strong>Regulatory & Compliance Support</strong> – Ensuring risk-free operations.</span>} icon={undefined} />
+      <BulletCard text={<span className="text-2xl"><strong>Local Expertise &amp; Global Reach</strong> – Connecting international investors with Africa&apos;s opportunities.</span>} icon={undefined} />
+      <BulletCard text={<span className="text-2xl"><strong>Regulatory &amp; Compliance Support</strong> – Ensuring risk-free operations.</span>} icon={undefined} />
 
       <p className="text-3xl text-gray-300 my-4 border-l-4 border-orange-500 pl-4">
-        Partner with Bullione to turn insights into impact and vision into value in Africa’s booming 
+        Partner with Bullione to turn insights into impact and vision into value in Africa&apos;s booming 
         investment landscape.
       </p>
       
