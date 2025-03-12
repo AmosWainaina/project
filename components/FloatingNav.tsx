@@ -65,7 +65,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav
+    <div
       className={`bg-white shadow-lg p-4 rounded-full flex justify-between items-center mx-4 my-4 transition-all duration-300 ${
         visible ? "opacity-100" : "opacity-0 translate-y-[-10px]"
       }`}
@@ -190,6 +190,6 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
-    </nav>
+    </div>
   );
 }
