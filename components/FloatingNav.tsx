@@ -54,8 +54,8 @@ export default function Navbar() {
   // Helper function to determine the link for each menu item
   const getLink = (item: string) => {
     if (item === "Home") return "/";
-    if (item === "About") return "#who-we-are";
-    if (item === "Services") return "#our-services";
+    if (item === "About") return "#about";
+    if (item === "Services") return "#services";
     return `/${item.toLowerCase()}`;
   };
 
