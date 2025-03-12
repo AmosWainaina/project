@@ -56,71 +56,104 @@ const FooterSection = () => {
   };
 
   return (
-    <footer id="contact" className="bg-orange-600/75 text-white py-10">
-      <div className="w-full px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <Link href="/" legacyBehavior>
-            <a>
-              <img src="/images/logo.png" alt="Bullione Logo" className="h-32 mb-2" />
-            </a>
-          </Link>
-          <p className="text-3xl mb-4">
-            <span className="font-bold">Bullione</span> Pioneering Growth, Crafting Investment Excellence in Africa, your Gateway to Africa's Golden Future
-          </p>
+    <footer id="contact" className="bg-gray-900 text-white py-10">
+      <div className="container mx-auto px-6 lg:px-20">
+        {/* Top Section - Logo & About */}
+        <div className="flex flex-col md:flex-row items-center justify-between pb-6 border-b border-gray-700 ">
+          
+          {/* Logo Section */}
+          <div className="flex items-center space-x-4 ">
+            <Link href="/" legacyBehavior>
+              <a>
+                <img src="/images/logo 2.png" alt="Bullione Logo" className="h-32" />
+              </a>
+            </Link>
+           
+          </div>
+
+          <div className="text-center md:text-left mt-4 md:mt-0 max-w-md">
+              <h1 className="text-white font-bold text-2xl">Bullione</h1>
+              <p className="text-black-400 text-sm mt-1">
+                Pioneering Growth, Crafting Investment Excellence in Africa,
+                 your Gateway to Africa&apos;s Golden Future
+              </p>
+            </div>
+
+          {/* About Us */}
+          <div className="text-center md:text-left mt-4 md:mt-0 max-w-md">
+            <h2 className="text-lg font-semibold">About Us</h2>
+            <p className="text-black-400 text-sm">
+              Bullione is your gateway to Africa&apos;s golden future. We specialize in crafting investment excellence and pioneering growth across the continent.
+            </p>
+          </div>
         </div>
 
-        <div className="md:px-28">
-          <h3 className="text-4xl p-5 font-bold mb-4">Links :</h3>
-          <ul className="text-3xl">
-            <li>
-              <Link href="/" legacyBehavior>
-                <a className="hover:text-yellow-300">Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#about" legacyBehavior>
-                <a className="hover:text-yellow-300">About us</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
+        {/* Middle Section - Contact Form & Socials */}
+        <div className="flex flex-col md:flex-row justify-between items-start mt-8 gap-8">
 
-        <div className="bg-white rounded-lg p-6 shadow-lg w-full">
-          <h3 className="text-4xl font-bold mb-4 text-yellow-600">Contact Us</h3>
-          <form ref={form} onSubmit={sendEmail} className="mt-6">
-            <input
-              type="text"
-              name="from_name"
-              placeholder="Your Name"
-              className="w-full p-3 mb-4 border rounded-lg text-black bg-white"
-              required
-            />
-            <input
-              type="email"
-              name="to_email"
-              placeholder="Recipient's Email"
-              className="w-full p-3 mb-4 border rounded-lg text-black bg-white"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={4}
-              className="w-full p-3 mb-4 border rounded-lg text-black bg-white"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className={`bg-orange-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-700 ${isSending ? 'opacity-50 cursor-not-allowed' : ''}`}
-              disabled={isSending}
-            >
-              {isSending ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
+           {/* Social Icons */}
+           <div className="flex flex-col items-center md:items-start w-full md:w-auto">
+            <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
+            <div className="flex space-x-6">
+              <a href="https://www.pinterest.com/bullioneafrica/" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+                <i className="fa-brands fa-pinterest "></i>
+              </a>
+              <a href="https://x.com/BullioneAfrica" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+                <i className="fab fa-x-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/bullioneafrica/" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/bullione-africa/" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-white rounded-lg p-6 shadow-lg w-full md:w-1/2">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact Us</h3>
+            <form ref={form} onSubmit={sendEmail} className="mt-4">
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                className="w-full p-3 mb-4 border rounded-lg text-gray-900 bg-gray-100"
+                required
+              />
+              <input
+                type="email"
+                name="to_email"
+                placeholder="Recipient's Email"
+                className="w-full p-3 mb-4 border rounded-lg text-gray-900 bg-gray-100"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows={4}
+                className="w-full p-3 mb-4 border rounded-lg text-gray-900 bg-gray-100"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className={`bg-orange-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-700 transition-all duration-300 ${
+                  isSending ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
+                disabled={isSending}
+              >
+                {isSending ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+          </div>
+
+          
         </div>
       </div>
-      <div className="flex justify-center items-center h-full">
-        <span className="text-xl font-bold">Bullione  © {new Date().getFullYear()}. All rights reserved.</span>
+
+      {/* Footer Bottom Section */}
+      <div className="text-center text-white-500 text-sm mt-8 border-t border-gray-700 pt-4">
+        <p>© {new Date().getFullYear()} Bullione. All Rights Reserved.</p>
       </div>
     </footer>
   );
