@@ -2,19 +2,24 @@ import { SignUp } from '@clerk/nextjs';
 import FloatingNav from '@/components/FloatingNav';
 import Footer from '@/components/Footer';
 
+export function generateStaticParams() {
+  return [
+    { slug: [] }, // For /sign-up
+  ];
+}
 
 export default function Page() {
   return (
     <>
-     <FloatingNav />
+      <FloatingNav />
       <main className='flex h-screen items-center justify-center'>
-          <SignUp
-            routing="path"
-            path="/sign-up"
-            forceRedirectUrl="/dashboard"
-          />
+        <SignUp
+          routing="path"
+          path="/sign-up"
+          forceRedirectUrl="/dashboard"
+        />
       </main>
-     <Footer />
+      <Footer />
     </>
   );
 }

@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import Footer from '@/components/Footer';
-// Sends email but has issues with file/cv/resume upload
-// Declare emailjs on the window object
+
 declare global {
   interface Window {
     emailjs: any;
@@ -35,7 +36,7 @@ const CareersPage: React.FC = () => {
     script.onload = () => {
       if (window.emailjs) {
         console.log('EmailJS loaded successfully');
-        window.emailjs.init('dohXkU4ulaG9D_Sue'); // Your public key
+        window.emailjs.init('dohXkU4ulaG9D_Sue'); 
       }
     };
     document.body.appendChild(script);
@@ -46,19 +47,20 @@ const CareersPage: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handlePhoneChange = (value: string) => {
+    setFormData({ ...formData, phone: value });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
 
     if (form.current && window.emailjs) {
-      const formData = new FormData(form.current);
-      
       window.emailjs.sendForm('service_5aztpv8', 'template_careers', form.current)
         .then((result: any) => {
           alert('Application sent successfully! ✅');
           form.current?.reset();
-          setFormData({ fullName: '', email: '', phone: '', linkedIn: '', comments: ''});
+          setFormData({ fullName: '', email: '', phone: '', linkedIn: '', comments: '' });
         })
         .catch((error: any) => {
           alert('Failed to send application. ❌');
@@ -95,14 +97,33 @@ const CareersPage: React.FC = () => {
 
           <div className="mb-4">
             <label className="block mb-2">Phone Number</label>
-            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required
-              className="w-full p-2 rounded bg-gray-700 text-orange-600 border border-orange-500 focus:ring-2 focus:ring-orange-400" />
+            <PhoneInput
+              country={'ke'}
+              value={formData.phone}
+              onChange={handlePhoneChange}
+              inputProps={{
+                name: 'phone',
+                required: true,
+              }}
+              containerClass="w-full"
+              inputClass="w-full p-2 rounded bg-gray-700 text-orange-600 border border-orange-500 focus:ring-2 focus:ring-orange-400"
+              buttonClass="bg-gray-700 border-orange-500"
+              dropdownClass="bg-gray-800 text-orange-600"
+            />
           </div>
 
           <div className="mb-4">
-            <label className="block mb-2">LinkedIn Profile (Optional)</label>
-            <input type="url" name="linkedIn" value={formData.linkedIn} onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-orange-600 border border-orange-500 focus:ring-2 focus:ring-orange-400" />
+            <label className="block mb-2">LinkedIn Profile</label>
+            <input
+              type="url"
+              name="linkedIn"
+              value={formData.linkedIn}
+              onChange={handleChange}
+              required
+              pattern="https?://(www\.)?linkedin\.com/.*"
+              placeholder="https://www.linkedin.com/in/your-profile"
+              className="w-full p-2 rounded bg-gray-700 text-orange-600 border border-orange-500 focus:ring-2 focus:ring-orange-400"
+            />
           </div>
 
           <div className="mb-4">
