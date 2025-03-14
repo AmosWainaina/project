@@ -120,7 +120,7 @@ export default function Navbar() {
               <Link href={link} legacyBehavior>
                 <a
                   className={`hover:text-yellow-500 transition ${
-                    isActiveLink(item === "Home" ? "/" : link) ? "text-yellow-500" : ""
+                    isActiveLink(link) ? "text-yellow-500" : ""
                   }`}
                 >
                   {item}
@@ -129,19 +129,27 @@ export default function Navbar() {
             </li>
           );
         })}
-        <div className="flex hover:text-yellow-500 transition">
+        <li key="auth">
           <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>
             <UserButton />
           </SignedIn>
-        </div>
+        </li>
       </ul>
+
+      {/* Backdrop for Mobile Menu */}
+      <div
+        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+          mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setMobileOpen(false)}
+      />
 
       {/* Mobile Menu (Slide-In) */}
       <div
-        className={`fixed top-0 right-0 z-50 w-3/4 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 right-0 z-50 w-64 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 md:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
         role="dialog"
@@ -161,7 +169,7 @@ export default function Navbar() {
               <li key={item}>
                 <Link href={link} legacyBehavior>
                   <a
-                    className="text-lg hover:text-yellow-500 transition"
+                    className="text-lg hover:text-yellow-500 transition py-2 block"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item}
@@ -170,14 +178,14 @@ export default function Navbar() {
               </li>
             );
           })}
-          <div className="flex flex-col space-y-4 mt-6">
+          <li key="auth-mobile">
             <SignedOut>
               <SignInButton />
             </SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
-          </div>
+          </li>
         </ul>
       </div>
 

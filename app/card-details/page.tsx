@@ -181,8 +181,8 @@ const IconRocket = (
 
 const cardDetailsMapping: { [key: string]: CardDetails } = {
   // 1. EPC &amp; Infrastructure Solutions (already has icons inline)
-  "EPC &amp; Infrastructure Solutions": {
-    title: "EPC &amp; Infrastructure Solutions",
+  "EPC & Infrastructure Solutions": {
+    title: "EPC & Infrastructure Solutions",
     images: ["/images/epc1.jpg", "/images/epc2.jpg", "/images/epc3.jpg"],
     fullContent: (
       <>
@@ -283,8 +283,8 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
   },
 
   // 2. Direct Investments &amp; Foreign Direct Investments
-  "Direct Investments &amp; Foreign Direct Investments": {
-    title: "Direct Investments &amp; Foreign Direct Investments",
+  "Direct Investments & Foreign Direct Investments": {
+    title: "Direct Investments & Foreign Direct Investments",
     images: ["/images/direct1.jpg", "/images/direct2.jpg", "/images/direct3.jpg"],
     fullContent: (
       <>
@@ -441,8 +441,8 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
   },
 
   // 4. Government &amp; Private Sector Projects
-  "Government &amp; Private Sector Projects": {
-    title: "Government &amp; Private Sector Projects",
+  "Government & Private Sector Projects": {
+    title: "Government & Private Sector Projects",
     images: ["/images/gov1.jpg", "/images/gov2.jpg", "/images/gov3.jpg"],
     fullContent: (
       <>
@@ -508,8 +508,8 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
   },
 
   // 5. Mergers &amp; Acquisitions
-  "Mergers &amp; Acquisitions": {
-    title: "Mergers &amp; Acquisitions",
+  "Mergers & Acquisitions": {
+    title: "Mergers & Acquisitions",
     images: ["/images/ma1.jpg", "/images/ma2.jpg", "/images/ma3.jpg"],
     fullContent: (
       <>
@@ -797,7 +797,9 @@ const cardDetailsMapping: { [key: string]: CardDetails } = {
  },
  // 9.  Market Intelligence.
  "Market Intelligence, Franchising and Licensing": {
-  title: "Market Intelligence, Franchising and Licensing, ICT and Data Center Developments",
+
+  title: "Market Intelligence, Franchising and Licensing",
+
   images: ["/images/Market1", "/images/Market2.jpg"],
   fullContent: (
     <>
