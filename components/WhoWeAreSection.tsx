@@ -1,10 +1,12 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { TracingBeam } from "@/components/ui/beam";
 import { Target, Rocket, Shield } from "lucide-react";
 
+// Define props for the VisionCard component.
 interface VisionCardProps {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
@@ -12,7 +14,12 @@ interface VisionCardProps {
   delay?: number;
 }
 
-const VisionCard: React.FC<VisionCardProps> = ({ icon: Icon, title, description, delay = 0 }) => {
+const VisionCard: React.FC<VisionCardProps> = ({
+  icon: Icon,
+  title,
+  description,
+  delay = 0,
+}) => {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -37,19 +44,20 @@ const VisionCard: React.FC<VisionCardProps> = ({ icon: Icon, title, description,
   );
 };
 
-const WhoWeAreSection = () => {
+const WhoWeAreSection: React.FC = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gray-900">
+    <section className="py-24 relative overflow-hidden bg-gray-900" id="about">
+      {/* Optional decorative element */}
       <div className="opacity-40">
         <TracingBeam />
       </div>
 
-      <div id="about" className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           className="max-w-3xl mx-auto text-center mb-16"
@@ -59,15 +67,14 @@ const WhoWeAreSection = () => {
         >
           <h2 className="text-6xl text-orange-600 font-bold mb-8">Who We Are</h2>
           <p className="text-4xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-            Bullione is built on the spirit of refined excellence, mirroring the purity of
-            bullion in its investment approach. The company positions itself as a
-            Growth Enabler—empowering companies, individuals, and investors to
-            navigate Africa's dynamic and diverse economic landscape.
+            Bullione is built on the spirit of refined excellence, mirroring the purity of bullion in its
+            investment approach. The company positions itself as a Growth Enabler—empowering companies,
+            individuals, and investors to navigate Africa&apos;s dynamic and diverse economic landscape.
           </p>
           <p className="text-3xl text-gray-600 dark:text-gray-300 leading-relaxed">
-            We also leverage cutting‐edge artificial intelligence to deliver modern,
-            efficient, and highly tailored solutions, underpinned by a commitment to
-            innovation, trustworthiness, and ethical business practices.
+            We also leverage cutting‐edge artificial intelligence to deliver modern, efficient, and highly
+            tailored solutions, underpinned by a commitment to innovation, trustworthiness, and ethical
+            business practices.
           </p>
         </motion.div>
 
@@ -87,7 +94,7 @@ const WhoWeAreSection = () => {
           <VisionCard
             icon={Shield}
             title="Our Commitment"
-            description="Our commitment is to redefining investment solutions, Bullione provides a comprehensive suite of services designed to meet the unique needs of its clients, ensuring they successfully capitalize on the myriad opportunities that the African market presents."
+            description="Our commitment is to redefining investment solutions. Bullione provides a comprehensive suite of services designed to meet the unique needs of its clients, ensuring they successfully capitalize on the myriad opportunities that the African market presents."
             delay={0.6}
           />
         </div>

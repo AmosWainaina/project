@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 import { TrendingUp, Users, Award } from "lucide-react";
 
 interface AnimatedCounterProps {
@@ -13,13 +14,13 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
-const AnimatedCounter = ({
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   value,
   duration = 1.5,
   title,
   icon: Icon,
   suffix = "+",
-}: AnimatedCounterProps) => {
+}) => {
   const [count, setCount] = useState(0);
   const { ref, inView } = useInView({
     threshold: 0.3,
@@ -30,14 +31,15 @@ const AnimatedCounter = ({
     if (inView) {
       let start = 0;
       // Extract numeric part from the value (e.g. "23M" becomes 23)
-      const end = parseInt(value.toString().replace(/[^0-9]/g, ""));
-      // Adjust increment time (you can tweak duration as needed)
+      const end = parseInt(value.toString().replace(/[^0-9]/g, ""), 10);
       const incrementTime = (duration * 1000) / (end || 1);
 
       const counter = setInterval(() => {
         start += 1;
         setCount(start);
-        if (start >= end) clearInterval(counter);
+        if (start >= end) {
+          clearInterval(counter);
+        }
       }, incrementTime);
 
       return () => clearInterval(counter);
@@ -65,32 +67,55 @@ const AnimatedCounter = ({
   );
 };
 
-const StatsSection = () => {
+const StatsSection: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-6xl font-bold text-orange-500 mb-4">
-            The Bullione Promise: Africa's ROI, Perfected
-          </h2>
-          <p className="text-orange-500 text-2xl max-w-2xl mx-auto">
-            Our track record speaks for itself. We've consistently delivered exceptional results for our clients across Africa.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-          {/* Updated values: using 15 for Years of Excellence */}
-          <AnimatedCounter value={15} title="Years of Combined Excellence" icon={Award} suffix="+" />
-          <AnimatedCounter value="23M" title="Value Created (USD)" icon={TrendingUp} suffix="+" />
-          <AnimatedCounter value={94} title="Client Retention Rate (%)" icon={Users} suffix="+" />
+    <>
+      <Head>
+        <title>Stats | Bullione</title>
+        <meta
+          name="description"
+          content="Discover the performance statistics that underscore the Bullione Promise in Africa."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <section className="py-24 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-6xl font-bold text-orange-500 mb-4">
+              The Bullione Promise: Africa's ROI, Perfected
+            </h2>
+            <p className="text-orange-500 text-2xl max-w-2xl mx-auto">
+              Our track record speaks for itself. We've consistently delivered exceptional results for our clients across Africa.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <AnimatedCounter
+              value={15}
+              title="Years of Combined Excellence"
+              icon={Award}
+              suffix="+"
+            />
+            <AnimatedCounter
+              value="23M"
+              title="Value Created (USD)"
+              icon={TrendingUp}
+              suffix="+"
+            />
+            <AnimatedCounter
+              value={94}
+              title="Client Retention Rate (%)"
+              icon={Users}
+              suffix="%"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

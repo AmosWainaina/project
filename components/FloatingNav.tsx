@@ -5,12 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Phone } from "lucide-react";
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 // Define your menu items
 const menuItems = ["Home", "About", "Services", "Careers", "Blog"];
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -20,11 +25,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
+      setVisible(currentScrollY <= lastScrollY || currentScrollY < 100);
       setLastScrollY(currentScrollY);
     };
 
@@ -35,9 +36,7 @@ export default function Navbar() {
   // Close mobile menu on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (mobileOpen) {
-        setMobileOpen(false);
-      }
+      if (mobileOpen) setMobileOpen(false);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -51,18 +50,16 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  // Helper function to determine the link for each menu item
-  const getLink = (item: string) => {
+  // Helper: Determine link for each menu item
+  const getLink = (item: string): string => {
     if (item === "Home") return "/";
     if (item === "About") return "#about";
     if (item === "Services") return "#services";
     return `/${item.toLowerCase()}`;
   };
 
-  // Helper function to check if a link is active
-  const isActiveLink = (link: string) => {
-    return pathname.startsWith(link);
-  };
+  // Helper: Check if link is active
+  const isActiveLink = (link: string): boolean => pathname.startsWith(link);
 
   return (
     <div
@@ -86,7 +83,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Mobile Menu Toggle Button */}
+      {/* Mobile Menu Toggle */}
       <div className="flex items-center md:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -106,7 +103,7 @@ export default function Navbar() {
               strokeLinejoin="round"
               strokeWidth="2"
               d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
+            />
           </svg>
         </button>
       </div>
@@ -139,7 +136,7 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {/* Backdrop for Mobile Menu */}
+      {/* Mobile Menu Backdrop */}
       <div
         className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
           mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -147,7 +144,7 @@ export default function Navbar() {
         onClick={() => setMobileOpen(false)}
       />
 
-      {/* Mobile Menu (Slide-In) */}
+      {/* Mobile Menu Slide-In */}
       <div
         className={`fixed top-0 right-0 z-50 w-64 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 md:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
@@ -189,7 +186,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* CTA Button */}
+      {/* CTA Button (Desktop) */}
       <div className="hidden md:flex">
         <Link href="/book-a-call" legacyBehavior>
           <a className="flex items-center gap-2 bg-orange-500 text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-400 transition-transform hover:scale-105">
@@ -200,4 +197,6 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;

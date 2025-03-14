@@ -95,19 +95,68 @@ const FooterSection = () => {
            <div className="flex flex-col items-center md:items-start w-full md:w-auto">
             <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
             <div className="flex space-x-6">
-              <a href="https://www.pinterest.com/bullioneafrica/" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
-                <i className="fa-brands fa-pinterest "></i>
+              <a
+                href="https://www.pinterest.com/bullioneafrica/"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fa-brands fa-pinterest"></i>
               </a>
-              <a href="https://x.com/BullioneAfrica" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+              <a
+                href="https://x.com/BullioneAfrica"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
                 <i className="fab fa-x-twitter"></i>
               </a>
-              <a href="https://www.instagram.com/bullioneafrica/" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+              <a
+                href="https://www.instagram.com/bullioneafrica/"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://www.linkedin.com/company/bullione-africa/" className="text-gray-400 hover:text-white text-2xl transition-all duration-300">
+              <a
+                href="https://www.linkedin.com/company/bullione-africa/"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
                 <i className="fab fa-linkedin"></i>
               </a>
+              <a
+                href="https://youtube.com/@bullioneafrica"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://www.snapchat.com/add/bullioneafrica?share_id=otcaOqz2HjY&locale=en-US"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fab fa-snapchat"></i>
+              </a>
+              <a
+                href="http://tiktok.com/@bullione.africa"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://wa.me/message/D6EAHJMWSK4ZC1"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="mailto:info@bullione.africa"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fa-solid fa-envelope"></i>
+              </a>
+              <a
+                href="https://www.threads.net/@bullioneafrica"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fab fa-threads"></i>
+              </a>
             </div>
+
           </div>
 
           {/* Contact Form */}
