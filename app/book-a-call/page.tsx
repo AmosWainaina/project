@@ -54,7 +54,7 @@ const BookACall: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     // Insert your submission logic here
-    alert("Thank you! We'll contact you when a suitable opportunity arises.");
+    alert("Thank you! We'll contact you.");
   };
 
   // Framer Motion variants for smooth animations

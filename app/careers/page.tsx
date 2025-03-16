@@ -43,11 +43,12 @@ const CareersPage: React.FC = () => {
     script.onload = () => {
       if (window.emailjs) {
         console.log("EmailJS loaded successfully");
-        window.emailjs.init("dohXkU4ulaG9D_Sue");
+        window.emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
       }
     };
     document.body.appendChild(script);
   }, []);
+  
 
   // Handle text and textarea changes
   const handleChange = (
@@ -69,7 +70,11 @@ const CareersPage: React.FC = () => {
 
     if (form.current && window.emailjs) {
       window.emailjs
-        .sendForm("service_5aztpv8", "template_careers", form.current)
+      .sendForm(
+        process.env.EMAILJS_SERVICE_ID!,
+        process.env.EMAILJS_TEMPLATE_ID!,
+        form.current
+      )
         .then((result: any) => {
           alert("Application sent successfully! ✅");
           form.current?.reset();
@@ -213,6 +218,8 @@ const CareersPage: React.FC = () => {
       </div>
     </>
   );
+  
 };
+
 
 export default CareersPage;

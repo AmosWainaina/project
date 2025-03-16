@@ -22,7 +22,7 @@ const FooterSection = () => {
     script.onload = () => {
       if (window.emailjs) {
         console.log('EmailJS loaded successfully');
-        window.emailjs.init('dohXkU4ulaG9D_Sue');
+        window.emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
       }
     };
     document.body.appendChild(script);
@@ -34,8 +34,8 @@ const FooterSection = () => {
 
     if (form.current && window.emailjs) {
       window.emailjs.sendForm(
-        'service_5aztpv8',
-        'template_tuovoht',
+        process.env.EMAILJS_SERVICE_ID!,
+        process.env.EMAILJS_TEMPLATES_ID!,
         form.current
       )
         .then((result: any) => {
@@ -207,5 +207,9 @@ const FooterSection = () => {
     </footer>
   );
 };
+
+console.log("EMAILJS_PUBLIC_KEY:", process.env.EMAILJS_PUBLIC_KEY);
+console.log("EMAILJS_SERVICE_ID:", process.env.EMAILJS_SERVICE_ID);
+console.log("EMAILJS_TEMPLATE_ID:", process.env.EMAILJS_TEMPLATE_ID);
 
 export default FooterSection;
