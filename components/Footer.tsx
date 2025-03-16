@@ -155,6 +155,12 @@ const FooterSection = () => {
               >
                 <i className="fab fa-threads"></i>
               </a>
+              <a
+                href="https://web.facebook.com/profile.php?id=61572838231975"
+                className="text-gray-400 hover:text-white text-2xl transition-all duration-300"
+              >
+                <i className="fab fa-facebook"></i>
+              </a>
             </div>
 
           </div>
