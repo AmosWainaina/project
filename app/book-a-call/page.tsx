@@ -5,6 +5,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
+import emailjs from "emailjs-com";
 
 // ---------------------------------------------------
 // 1) Type Definitions
@@ -30,6 +31,7 @@ const BookACall: React.FC = () => {
     linkedIn: "",
     comments: "",
   });
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   // Handle text and textarea changes
@@ -51,10 +53,40 @@ const BookACall: React.FC = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    // Insert your submission logic here
-    alert("Thank you! We'll contact you.");
+    setLoading(true);
+
+    const templateParams = {
+      fullName: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      linkedIn: formData.linkedIn || "Not provided",
+      comments: formData.comments || "No comments",
+    };
+
+    try {
+      const response = await emailjs.send(
+        "service_5aztpv8", 
+        "template_bookacall", 
+        templateParams,
+        "dohXkU4ulaG9D_Sue"
+      );
+      console.log("Email sent successfully!", response);
+      alert("Thank you! We'll contact you soon.");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        resume: null,
+        linkedIn: "",
+        comments: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Oops! Something went wrong. Please try again.");
+    }
+    setLoading(false);
   };
 
   // Framer Motion variants for smooth animations
@@ -203,11 +235,8 @@ const BookACall: React.FC = () => {
                 className="w-full p-3 rounded bg-gray-700 text-orange-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="w-full py-3 bg-orange-500 text-black font-bold rounded-lg hover:bg-orange-400 transition duration-300"
-            >
-              Submit
+            <button type="submit" className="w-full py-3 bg-orange-500 text-black font-bold rounded-lg hover:bg-orange-400" disabled={loading}>
+              {loading ? "Sending..." : "Submit"}
             </button>
           </form>
         </motion.div>

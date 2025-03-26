@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import Sparkles from "@/components/ui/sparkles";
 import Image from "next/image";
+import emailjs from "emailjs-com";
 
 const HeroSection: React.FC = () => {
   // Wrap images in useMemo to ensure a stable reference
@@ -15,6 +16,7 @@ const HeroSection: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [showJoinForm, setShowJoinForm] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
 
   // Change background image every 5 seconds
   useEffect(() => {
@@ -64,6 +66,33 @@ const HeroSection: React.FC = () => {
     []
   );
 
+  // Handle the form submission and send email with EmailJS
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      alert("Please enter a valid email.");
+      return;
+    }
+
+    try {
+      const result = await emailjs.send(
+        "service_wua4zu9",   // Replace with your EmailJS service ID
+        "template_ddvlyum",  // Replace with your EmailJS template ID
+        { email },           // Send the email data
+        "LL_UeXslgwKLM98Py"       // Replace with your EmailJS user ID
+      );
+
+      console.log('Email sent successfully:', result);
+      alert('Thank you for subscribing!');
+      setEmail(""); // Clear the email input
+      setShowJoinForm(false); // Close the modal
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to subscribe. Please try again later.');
+    }
+  };
+
   return (
     <section id="hero" className="relative bg-black overflow-hidden h-[90vh] lg:h-[100vh]">
       {/* Optimized Background Image */}
@@ -99,19 +128,29 @@ const HeroSection: React.FC = () => {
         >
           <div className="bg-white p-6 rounded shadow-lg max-w-md w-full">
             <h2 id="joinFormTitle" className="text-xl mb-4">Join Our Mailing List</h2>
-            <input 
-              type="email" 
-              placeholder="Your Email" 
-              className="w-full p-2 mb-4 border rounded" 
-            />
-            <div className="flex justify-end">
-              <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                Subscribe
-              </button>
-              <button className="ml-4 text-red-500" onClick={() => setShowJoinForm(false)}>
-                Close
-              </button>
-            </div>
+            <form onSubmit={handleEmailSubmit}>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your Email"
+                className="w-full p-2 mb-4 border rounded"
+              />
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+                >
+                  Subscribe
+                </button>
+                <button
+                  className="ml-4 text-red-500"
+                  onClick={() => setShowJoinForm(false)}
+                >
+                  Close
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
